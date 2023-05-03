@@ -1,0 +1,395 @@
+import React from 'react';
+import './App.css';
+
+function App() {
+  const details = [
+    {
+      title: "Free",
+      price: "$0",
+      time: "/month",
+      list: ["Single User", "5GB Storage", "Unlimited Public Projects", "Community Access",
+        "Private Projects", "Phone Support", "Free Subdomain", "Reports"],
+    },
+    // PLUS
+    // 9$/month
+    // 5 Users
+    // 50GB Storage
+    // Unlimited Public Projects
+    // Community Access
+    // Unlimited Private Projects
+    // Dedicated Phone Support
+    // Free Subdomain
+    // Monthly Status Reports
+    {
+      title: "PLUS",
+      price: "$9",
+      time: "/month",
+      list: ["5 User", "50GB Storage", "Unlimited Public Projects", "Community Access",
+        "Unlimited Private Projects", "Free Subdomain", "Monthly Status", "Reports"],
+    },
+
+    // PRO
+    // $49/month
+    // Unlimited Users
+    // 150GB Storage
+    // Unlimited Public Projects
+    // Community Access
+    // Unlimited Private Projects
+    // Dedicated Phone Support
+    // Unlimited Free Subdomains
+    // Monthly Status Reports
+    {
+      title: "PRO",
+      price: "$49",
+      time: "/month",
+      list: ["Unlimited Users", "150GB Storage", "Unlimited Public Projects", "Community Access",
+        "Unlimited Private Projects", "Dedicated Phone Support", "Free Subdomain", "Reports"],
+    }
+  ]
+  return (
+    <div className="App">
+      {details.map((card, index) => (
+        <Card
+          key={index}
+          title={card.title}
+          price={card.price}
+          time={card.time}
+          list={card.list}
+        />
+      ))}
+    </div>
+  );
+}
+
+export default App;
+function Card({ title, price, time, list }) {
+  return (
+    <section className="pricing py-5">
+<div className="container">
+  <div className="row">
+    <div className="col-md-4">
+      <div className="card mb-4 mb-md-0">
+        <div className="card-body">
+          <h5 className="card-title text-muted text-uppercase text-center">{title}</h5>
+          <h6 className="card-price text-center">{price}<span className="period">{time}</span></h6>
+          <hr/>
+          <ul className="fa-ul">
+            <li><span className="fa-li"><i className="fa fa-check"></i></span>{list[0]}</li>
+            <li><span className="fa-li"><i className="fa fa-check"></i></span>{list[1]}</li>
+            <li><span className="fa-li"><i className="fa fa-check"></i></span>{list[2]}</li>
+            <li><span className="fa-li"><i className="fa fa-check"></i></span>{list[3]}</li>
+            <li className="text-muted"><span className="fa-li"><i className="fa fa-times"></i></span>{list[4]}</li>
+            <li className="text-muted"><span className="fa-li"><i className="fa fa-times"></i></span>{list[5]}</li>
+            <li className="text-muted"><span className="fa-li"><i className="fa fa-times"></i></span>{list[6]}</li>
+            <li className="text-muted"><span className="fa-li"><i className="fa fa-times"></i></span>{list[7]}</li>
+          </ul>
+          <div className="d-grid">
+            <a href="#" className="btn btn-primary text-uppercase">Button</a>
+          </div>
+        </div>
+      </div>
+    </div>
+    </div>
+    </div>
+    </section>
+
+  )
+}
+{/* <section className="pricing py-5">
+<div className="container">
+  <div className="row">
+    <div className="col-md-4">
+      <div className="card mb-4 mb-md-0">
+        <div className="card-body">
+          <h5 className="card-title text-muted text-uppercase text-center">{title}</h5>
+          <h6 className="card-price text-center">{price}<span className="period">{time}</span></h6>
+          <hr/>
+          <ul className="fa-ul">
+            <li><span className="fa-li"><i className="fa fa-check"></i></span>{list[0]}</li>
+            <li><span className="fa-li"><i className="fa fa-check"></i></span>{list[1]}</li>
+            <li><span className="fa-li"><i className="fa fa-check"></i></span>{list[2]}</li>
+            <li><span className="fa-li"><i className="fa fa-check"></i></span>{list[3]}</li>
+            <li className="text-muted"><span className="fa-li"><i className="fa fa-times"></i></span>{list[4]}</li>
+            <li className="text-muted"><span className="fa-li"><i className="fa fa-times"></i></span>{list[5]}</li>
+            <li className="text-muted"><span className="fa-li"><i className="fa fa-times"></i></span>{list[6]}</li>
+            <li className="text-muted"><span className="fa-li"><i className="fa fa-times"></i></span>{list[7]}</li>
+          </ul>
+          <div className="d-grid">
+            <a href="#" className="btn btn-primary text-uppercase">Button</a>
+          </div>
+        </div>
+      </div>
+    </div>
+    </div>
+    </div>
+    </section> */}
+
+    // <div className="container">
+    // <div className="row">
+    // <div className="col-md-4">
+    // <div className="detail">
+    //   <h5 className="card-title text-muted text-uppercase text-center">{title}</h5>
+    //   <h6>{price}<span>{time}</span></h6>
+    //   <li className="fa fa-check">{list[0]}</li>
+    //   <li>{list[1]}</li>
+    //   <li>{list[2]}</li>
+    //   <li>{list[3]}</li>
+    //   <li>{list[4]}</li>
+    //   <li>{list[5]}</li>
+    //   <li>{list[6]}</li>
+    //   <li>{list[7]}</li>
+    //   <button>Button</button>
+    // </div>
+    // </div>
+    // </div>
+    // </div>
+
+
+    //////////////////////////////////////////////////////////////////////////////////////////////////////
+
+
+    .App {
+  text-align: center;
+   /* display: flex;
+  flex-direction: row; */
+  /* justify-content: space-evenly;
+  gap: 0.5rem;
+  margin-top: 150px;  */
+}
+
+/* .detail{
+  border: 1px solid rgb(12, 12, 12);
+  width: 280px;
+  margin: 0 auto;
+  height: 380px;
+  border-radius: 5px;
+  
+} */
+
+
+section.pricing {
+  background: #007bff;
+  background: linear-gradient(to right, #0062E6, #33AEFF);
+  display: flex;
+  justify-content: space-around;
+}
+
+.pricing .card {
+  border: none;
+  border-radius: 1rem;
+  transition: all 0.2s;
+  box-shadow: 0 0.5rem 1rem 0 rgba(0, 0, 0, 0.1);
+}
+
+.pricing hr {
+  margin: 1.5rem 0;
+}
+
+.pricing .card-title {
+  margin: 0.5rem 0;
+  font-size: 0.9rem;
+  letter-spacing: .1rem;
+  font-weight: bold;
+}
+
+.pricing .card-price {
+  font-size: 3rem;
+  margin: 0;
+}
+
+.pricing .card-price .period {
+  font-size: 0.8rem;
+}
+
+.pricing ul li {
+  margin-bottom: 1rem;
+}
+
+.pricing .text-muted {
+  opacity: 0.7;
+}
+
+.pricing .btn {
+  width: 300px;
+  border-radius: 5rem;
+  letter-spacing: .1rem;
+  font-weight: bold;
+  padding: 1rem;
+  opacity: 0.7;
+  transition: all 0.2s;
+}
+
+
+ @media (min-width: 992px) {
+  .pricing .card:hover {
+    margin-top: -.25rem;
+    margin-bottom: .25rem;
+    box-shadow: 0 0.5rem 1rem 0 rgba(0, 0, 0, 0.3);
+  }
+
+  .pricing .card:hover .btn {
+    opacity: 1;
+  }
+}
+
+/* .card-body{
+  width: 100px;
+} */
+.col-md-4{
+ display: flex;
+ flex-direction: row;
+} 
+
+//////////////////////////////////////////
+
+import React from 'react';
+import './App.css';
+
+function App() {
+  const details = [
+    {
+      title: "Free",
+      price: "$0",
+      time: "/month",
+      list1: "Single User", 
+      list2: "5GB Storage", 
+      list3: "Unlimited Public Projects", 
+      list4: "Community Access",
+      list5: "Private Projects", 
+      list6: "Phone Support", 
+      list7: "Free Subdomain", 
+      list8: "Reports"
+    },
+    {
+      title: "PLUS",
+      price: "$9",
+      time: "/month",
+      list: "5 User", 
+      list1: "50GB Storage", 
+      list2: "Unlimited Public Projects", 
+      list3: "Community Access",
+      list4: "Unlimited Private Projects", 
+      list5:  "Dedicated Phone Support",
+      list6: "Free Subdomain", 
+      list7: "Monthly Status", 
+      list8: "Reports"
+    },
+    {
+      title: "PRO",
+      price: "$49",
+      time: "/month",
+      list1: "Unlimited Users", 
+      list2:"150GB Storage", 
+      list3:"Unlimited Public Projects", 
+      list4:"Community Access",
+      list5:"Unlimited Private Projects", 
+      list6:"Dedicated Phone Support", 
+      list7:"Free Subdomain", 
+      list8:"Reports"
+    }
+  ]
+  return (
+    <div className="App">
+      {details.map((card, index) => (
+        <Card
+          key={index}
+          title={card.title}
+          price={card.price}
+          time={card.time}
+          list1={card.list1}
+          list2={card.list2}
+          list3={card.list3}
+          list4={card.list4}
+          list5={card.list5}
+          list6={card.list6}
+          list7={card.list7}
+          list8={card.list8}
+
+        />
+      ))}
+    </div>
+  );
+}
+
+export default App;
+function Card({ title, price, time, list }) {
+  return (
+    <section className="pricing py-5">
+<div className="container">
+  <div className="row">
+    <div className="col-md-4">
+      <div className="card mb-4 mb-md-0">
+        <div className="card-body">
+          <h5 className="card-title text-muted text-uppercase text-center">{title}</h5>
+          <h6 className="card-price text-center">{price}<span className="period">{time}</span></h6>
+          <hr/>
+          <ul className="fa-ul">
+            <li><span className="fa-li"><i className="fa fa-check"></i></span>{list1}</li>
+            <li><span className="fa-li"><i className="fa fa-check"></i></span>{list2}</li>
+            <li><span className="fa-li"><i className="fa fa-check"></i></span>{list3}</li>
+            <li><span className="fa-li"><i className="fa fa-check"></i></span>{list4}</li>
+            <li className="text-muted"><span className="fa-li"><i className="fa fa-times"></i></span>{list5}</li>
+            <li className="text-muted"><span className="fa-li"><i className="fa fa-times"></i></span>{list6}</li>
+            <li className="text-muted"><span className="fa-li"><i className="fa fa-times"></i></span>{list7}</li>
+            <li className="text-muted"><span className="fa-li"><i className="fa fa-times"></i></span>{list8}</li>
+          </ul>
+          <div className="d-grid">
+            <a href="#" className="btn btn-primary text-uppercase">Button</a>
+          </div>
+        </div>
+      </div>
+    </div>
+    </div>
+    </div>
+    </section>
+
+  )
+}
+{/* <section className="pricing py-5">
+<div className="container">
+  <div className="row">
+    <div className="col-md-4">
+      <div className="card mb-4 mb-md-0">
+        <div className="card-body">
+          <h5 className="card-title text-muted text-uppercase text-center">{title}</h5>
+          <h6 className="card-price text-center">{price}<span className="period">{time}</span></h6>
+          <hr/>
+          <ul className="fa-ul">
+            <li><span className="fa-li"><i className="fa fa-check"></i></span>{list[0]}</li>
+            <li><span className="fa-li"><i className="fa fa-check"></i></span>{list[1]}</li>
+            <li><span className="fa-li"><i className="fa fa-check"></i></span>{list[2]}</li>
+            <li><span className="fa-li"><i className="fa fa-check"></i></span>{list[3]}</li>
+            <li className="text-muted"><span className="fa-li"><i className="fa fa-times"></i></span>{list[4]}</li>
+            <li className="text-muted"><span className="fa-li"><i className="fa fa-times"></i></span>{list[5]}</li>
+            <li className="text-muted"><span className="fa-li"><i className="fa fa-times"></i></span>{list[6]}</li>
+            <li className="text-muted"><span className="fa-li"><i className="fa fa-times"></i></span>{list[7]}</li>
+          </ul>
+          <div className="d-grid">
+            <a href="#" className="btn btn-primary text-uppercase">Button</a>
+          </div>
+        </div>
+      </div>
+    </div>
+    </div>
+    </div>
+    </section> */}
+
+    // <div className="container">
+    // <div className="row">
+    // <div className="col-md-4">
+    // <div className="detail">
+    //   <h5 className="card-title text-muted text-uppercase text-center">{title}</h5>
+    //   <h6>{price}<span>{time}</span></h6>
+    //   <li className="fa fa-check">{list[0]}</li>
+    //   <li>{list[1]}</li>
+    //   <li>{list[2]}</li>
+    //   <li>{list[3]}</li>
+    //   <li>{list[4]}</li>
+    //   <li>{list[5]}</li>
+    //   <li>{list[6]}</li>
+    //   <li>{list[7]}</li>
+    //   <button>Button</button>
+    // </div>
+    // </div>
+    // </div>
+    // </div>
